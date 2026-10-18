@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>My First Javasript Programme</h2>
+    <button onclick="runcode()">Run Code</button>
+    <p id="result"></p>
+    <script>
+        function runcode(){
+            //step 1:store a number in a variable
+            let number1=10;
+            let number2=5;
+            //step2:add both numbers
+            let sum=number1+number2
+            document.getElementById("result").innerText="Sum is :"+sum;
+        }
+    </script>
+<h2>Data Types Example</h2>
+<button onclick="runcode2()">Run code2</button>
+<p id="result2"></p>
+
+<script>
+function runcode2(){
+let age=15;
+let name="Aman";
+let isStudent=true;
+document.getElementById("result2").innerHTML=
+"age type is:"+typeof age + "
++isStudent+"type is :"+ typeof name+"<br>" + isStudent +"type is: "+ typeof isStudent;
+}
+</script>
+<h2>If-Else Example</h2>
+    <button oclick="runcode()">Run code</button>
+    <p id="result4"></p>
+    <script>
+        function runCode(){
+
+
+        }
+    </script>
+    <h2>Functions Example</h2>
+    <button onclick="runcode5()">Run code</button>
+    <p id="result5"></p>
+    <script>
+        function runCode5(){
+         function addNumbers(x,y){
+                return x+y;
+            }
+        let sum=addNumbers(5,7);
+        }
+    </script>
+    <h2>Arrays Example</h2>
+    <button onclick="runCode6()">Run Code</button></button>
+    <p id="result6"></p>
+    <script>
+        function runCode6(){
+            let students=["Aman","Riya","Karan"];
+            let first=students[0];
+            let total=students.length;
+            students.push("Sneha");
+            document.getElementById("result6").innerText="first"+
+        }
+    </script>
+    <h2>Dictionary Example</h2>
+    <button onclick="runcode7()">Run code</button>
+    <p id="result7"></p>
+    <script>
+        funcyion runCode7(){
+            let student={
+                name:"Aman",
+                age:15,
+                marks:85,
+            };
+            let studentName=student.name;
+            let studentAge=student["age"];
+            student.marks=90;
+            document.getElementById("result7").innerText="Name:"+studentName+"|"+"Age:"+studentAge+"|"+"Marks:"+studentMarks+"|";
+        }
+</script>
+<h2>Example 9</h2>
+    <button onclick="runcode9()">Run code</button>
+    <p id="result9"></p>
+    <script>
+        function runCode9(){
+            document.getElementById("demoText").innerText="Hello Javascript changed this text.";
+            document.getElementById("demoText").style.color="green";
+        }
+        </script>
+        <h2>Events Example</h2>
+        <button onclick="setupEvent()">Setup Event(run once)</button>
+        <button id="clickMeBtn">Click Me!</button>
+        <script>
+            function setupEvent(){
+                document.getElementById("clickMeBtn").addEventListener("click",function(){
+                    alert("You click the button");
+                });
+                }
+            
+        </script>
+        <script>
+function runCode7() {
+// object = related data grouped together (key: value pairs)
+let student = {
+name: "Aman",
+age: 16,
+marks: 85
+};
+// access value using dot
+let studentName = student.name;
+// access value using bracket
+let studentAge = student["age"];
+// update a value
+student.marks = 90;
+// showing results on the page
+document.getElementById("result7").innerText =
+"Name: " + studentName + " | " +
+"Age: " + studentAge + " | " +
+"Updated Marks: " + student.marks;
+}
+
+</script>
+<h2>Events Example</h2>
+<button onclick="setupEvent()">Setup Event (run once)</button>
+<button id="clickMeBtn">Click Me!</button>
+<script>
+function setupEvent() {
+// addEventListener "listens" for a click and runs a function when it happens
+document.getElementById("clickMeBtn").addEventListener("click", function()
+{
+alert("You clicked the button!");
+});
+}
+</script>
+<br>
+<button id="btn">Click The Button</button>
+<p id="output">Hello</p>
+<script>
+    document.getElementById("btn").addEventListener("click",()=>{
+        document.getElementById("output").textContent="Button was clicked!";
+    });
+</script>
+<input type=""text" id="nameInput" placeholder="Enter Your Name">
+<p id="greet"></p>
+<script>
+    const input=document.getElementById("nameInput");
+    const greet=document.getElementById("greet");
+    input.addEventListener("input",()=>{
+        greet.textContent=`Hello,${input.value}!`;
+
+    });
+</script>
+<ul id="taskList">
+    <li>Sample task</li>
+    <li>Sample task</li>
+</ul>
+<script>
+    document.getElementById("taskList").addEventListener("click",(0)=>{
+        if(e.target.tagName==="Li"){
+            e.target.remove();
+        }
+    });
+</script>
+<input type="text" id="taskInput" placeholder="Enter a task">
+<button id="addBtn">Add</button>
+<ul id="taskList"></ul>
+<script>
+    document.getElementById("addBtn").addEventListener('click',()=>{
+        const input =document.getElementById("taskInput");
+        if(input.value.trim()==="") return;
+        const li=document.createElement("li");
+        li.textContent=input.value;
+        document.getElementById("tasklist").appendChild(li);
+        input.value=" ";
+    });
+</script>
+
+
+
+
+</body>
+</html>
