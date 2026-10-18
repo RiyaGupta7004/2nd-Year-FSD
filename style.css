@@ -1,0 +1,14 @@
+body{
+font-family:Arial, Helvetica, sans-serif;
+background-color: darkorchid;
+text-align:center;
+margin-top:50px;
+
+}
+h1{
+    color: black;
+}
+p{
+    color: black;
+    font-size: 10px;
+}
